@@ -1,0 +1,209 @@
+/* === Reset general === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* === Fondo general === */
+body {
+    background-color: #f5f6f7;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* === Encabezado con botón de navegación === */
+header {
+    background-color: #f7df1e; /* amarillo JS */
+    text-align: center;
+    padding: 50px 20px 60px 20px;
+    position: relative;
+}
+
+/* Botón volver al inicio */
+header nav {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+header nav a {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: #333;
+}
+
+/* Título y subtítulo */
+header h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #222;
+}
+
+/* === Contenedor principal === */
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* === Tarjetas === */
+.tarjeta {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos dentro de tarjetas */
+.tarjeta h2 {
+    font-size: 1.1rem;
+    color: #e6b800; /* tono dorado JS */
+    margin-bottom: 15px;
+}
+
+/* Imágenes */
+.tarjeta img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* === Footer === */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* --- Tablets (hasta 992px) --- */
+@media (max-width: 992px) {
+    header {
+        padding: 40px 15px 50px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .contenedor {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .tarjeta h2 {
+        font-size: 1rem;
+    }
+
+    .tarjeta img {
+        max-width: 100%;
+    }
+}
+
+/* --- Celulares grandes (hasta 768px) --- */
+@media (max-width: 768px) {
+    header {
+        padding: 35px 15px 45px 15px;
+    }
+
+    header nav a {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+        display: flex;
+    }
+
+    header h1 {
+        margin-top: 20px;
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    .tarjeta {
+        padding: 18px;
+    }
+
+    .tarjeta h2 {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+}
+
+/* --- Celulares pequeños (hasta 480px) --- */
+@media (max-width: 480px) {
+    header {
+        padding: 25px 10px 35px 10px;
+    }
+
+    header nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    header nav a {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .tarjeta {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+}
